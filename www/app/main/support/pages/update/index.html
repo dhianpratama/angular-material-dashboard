@@ -1,0 +1,42 @@
+<md-dialog>
+    <form>
+        <md-toolbar class="red darken-4">
+            <div class="md-toolbar-tools">
+                <h2>{{pages.title}} {{pages.data.page}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="pages.cancel()">
+                    <md-icon>close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content style="width:800px;">
+
+            <md-input-container class="md-icon-float md-block">
+                <label>Page</label>
+                <md-icon class="name">assignment</md-icon>
+                <input ng-model="pages.data.page" type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Sub Page</label>
+                <md-icon>library_books</md-icon>
+                <input ng-model="pages.data.subPage" type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block" style="border: 1px solid lightgrey">
+                <h5>Content</h5>
+                <text-angular ng-model="pages.htmlVariable"></text-angular>
+            </md-input-container>
+
+
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button class="md-raised" ng-click="pages.cancel()">
+                Cancel
+            </md-button>
+            <md-button class="md-raised md-primary" ng-click="pages.save()">Save</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

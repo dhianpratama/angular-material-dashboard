@@ -1,0 +1,46 @@
+<md-dialog>
+    <form>
+        <md-toolbar class="red darken-4">
+            <div class="md-toolbar-tools">
+                <h2>{{user.data.name}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="user.cancel()">
+                    <md-icon>close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div layout="row" layout-xs="column" class="mg-top-10">
+                <div flex>
+                    <h5 class="no-margin">Name</h5>
+                    <p class="info-label">{{user.data.name}}</p>
+                </div>
+                <div flex>
+                    <h5 class="no-margin">Birthdate</h5>
+                    <p class="info-label">{{user.data.birthdate}}</p>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" class="mg-top-10">
+                <div flex>
+                    <h5 class="no-margin">Email</h5>
+                    <p class="info-label">{{user.data.email}}</p>
+                </div>
+                <div flex>
+                    <h5 class="no-margin">Gender</h5>
+                    <p class="info-label">{{user.data.gender}}</p>
+                </div>
+            </div>
+
+            <div layout="row" layout-xs="column" class="mg-top-10">
+                <div flex>
+                    <h5 class="no-margin">Phone</h5>
+                    <p class="info-label">{{user.data.phone}}</p>
+                </div>
+                <div flex>
+                    <h5 class="no-margin">Card Number</h5>
+                    <p class="info-label">{{user.data.cardNumber}}</p>
+                </div>
+            </div>
+        </md-dialog-content>
+    </form>
+</md-dialog>

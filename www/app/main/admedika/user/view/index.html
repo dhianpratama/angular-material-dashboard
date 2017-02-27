@@ -1,0 +1,67 @@
+<md-dialog>
+    <form>
+        <md-toolbar class="red darken-4">
+            <div class="md-toolbar-tools">
+                <h2>{{admedika.data.name}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="admedika.cancel()">
+                    <md-icon>close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div layout="row" layout-xs="column" class="mg-top-10">
+                <div flex>
+                    <h5 class="no-margin">Name</h5>
+                    <p class="info-label">{{admedika.data.name}}</p>
+                </div>
+                <div flex>
+                    <h5 class="no-margin">Call Center</h5>
+                    <p class="info-label">{{admedika.data.callCenter}}</p>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" class="mg-top-10">
+                <div flex>
+                    <h5 class="no-margin">Date of Birth</h5>
+                    <p class="info-label">{{admedika.data.birthdate}}</p>
+                </div>
+                <div flex>
+                    <h5 class="no-margin">Member Type</h5>
+                    <p class="info-label">{{admedika.data.memberType}}</p>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" class="mg-top-10">
+                <div flex>
+                    <h5 class="no-margin">Plan Type</h5>
+                    <p class="info-label">{{admedika.data.planType}}</p>
+                </div>
+                <div flex>
+                    <h5 class="no-margin">BPJS Id</h5>
+                    <p class="info-label">{{admedika.data.memberType}}</p>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" class="mg-top-10">
+                <div flex>
+                    <h5 class="no-margin">BPJS Class</h5>
+                    <p class="info-label">{{admedika.data.bpjsClass}}</p>
+                </div>
+                <div flex>
+                    <h5 class="no-margin">BPJS Faskes</h5>
+                    <p class="info-label">{{admedika.data.bpjsFaskes}}</p>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" class="mg-top-10">
+                <div flex>
+                    <h5 class="no-margin">Payor Info</h5>
+                    <p class="info-label">{{admedika.data.payorInfo}}</p>
+                </div>
+                <div flex>
+                    <h5 class="no-margin">Corporate Info</h5>
+                    <p class="info-label">{{admedika.data.corporateInfo}}</p>
+                </div>
+            </div>
+
+
+        </md-dialog-content>
+    </form>
+</md-dialog>

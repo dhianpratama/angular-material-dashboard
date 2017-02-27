@@ -1,0 +1,88 @@
+<section>
+    <div class="page-header">
+        <h1> <i class="md md-camera"></i> Support Pages</h1>
+        <p class="lead"> Some description for support pages menu here</u>. </p>
+    </div>
+    <md-card>
+        <md-toolbar class="md-table-toolbar md-default" ng-show="!pages.filter.show  && (!pages.options.rowSelection || !pages.selected.length)">
+            <div class="md-toolbar-tools">
+                <!--<span>Support Pages</span>-->
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="pages.filter.show=true;">
+                    <md-icon>search</md-icon>
+                </md-button>
+                <md-button class="md-icon-button" ng-click="pages.getData()">
+                    <md-icon>refresh</md-icon>
+                </md-button>
+                <md-button class="md-icon-button" ng-click="pages.createNewData()">
+                    <md-icon>add</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-toolbar class="md-table-toolbar md-default" ng-show="pages.filter.show">
+            <div class="md-toolbar-tools">
+                <md-icon class="material-icons">search</md-icon>
+                <form name="filter.form" flex>
+                    <input type="text" ng-model="pages.query.filter.keyword" placeholder="search" class="full-width">
+                </form>
+                <button class="md-icon-button md-button md-ink-ripple" type="button" ng-click="pages.closeSearch()" aria-label="close">
+        <md-icon class="material-icons">close</md-icon>
+        <div class="md-ripple-container"></div></button>
+            </div>
+        </md-toolbar>
+
+
+        <md-table-container>
+            <table md-table md-row-select ng-model="pages.selected">
+                <thead md-head md-order="pages.query.order" md-on-reorder="pages.data">
+                    <tr md-row>
+                        <th md-column></th>
+                        <th md-column md-order-by="page"><span>Page</span></th>
+                        <th md-column md-order-by="subPage"><span>Sub Page</span></th>
+                        <th md-column md-order-by="content"><span>Content</span></th>
+                    </tr>
+                </thead>
+                <tbody md-body>
+                    <tr md-row md-select-id="name" md-auto-select ng-repeat="u in pages.data | filter:pages.query.filter.keyword | orderBy: pages.query.order | limitTo: pages.query.limit: (pages.query.page - 1) * pages.query.limit">
+                        <td md-cell class="no-padding">
+                            <button type="button" class="btn btn-link btn-round" data-title="Edit item"><i class="md md-edit"></i><div class="ripple-wrapper"></div></button>
+                            <md-menu>
+                                <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="pages.openMenu($mdMenu, $event)">
+                                    <md-icon class="material-icons">more_vert</md-icon>
+                                </md-button>
+                                <md-menu-content width="4">
+                                    <md-menu-item>
+                                        <md-button ng-click="pages.viewData($event, u)">
+                                            <md-icon class="material-icons">visibility</md-icon>
+                                            <span>View</span>
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="pages.editData($event, u)">
+                                            <md-icon class="material-icons">mode_edit</md-icon>
+                                            Edit
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-divider></md-menu-divider>
+                                    <md-menu-item>
+                                        <md-button ng-click="pages.onDelete($event, u)">
+                                            <md-icon class="material-icons">delete</md-icon>
+                                            Delete
+                                        </md-button>
+                                    </md-menu-item>
+                                </md-menu-content>
+                            </md-menu>
+                        </td>
+                        <td md-cell>{{u.page}}</td>
+                        <td md-cell>{{u.subPage}}</td>
+                        <td md-cell>{{u.content}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+
+        <md-table-pagination md-limit="pages.query.limit" md-limit-options="[10, 25, 50]" md-page="pages.query.page" md-total="{{pages.data.length}}"></md-table-pagination>
+
+    </md-card>
+</section>

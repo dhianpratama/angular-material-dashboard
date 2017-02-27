@@ -1,0 +1,111 @@
+<!--<section>
+    <div class="page-header">
+        <h1> <i class="md md-camera"></i> Technical Configs</h1>
+        <p class="lead"> Some description for technical configs menu here</u>. </p>
+    </div>
+    <md-card>
+        <md-content layout-padding>
+            <md-input-container class="md-block">
+                <label>AdMedika</label>
+                <md-icon>perm_identity </md-icon>
+                <input ng-model="admedika.data.callCenter" type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Email</label>
+                <md-icon>email</md-icon>
+                <input ng-model="admedika.data.policyNumber" type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Google</label>
+                <md-icon>email</md-icon>
+                <input ng-model="admedika.data.memberId" type="text">
+            </md-input-container>
+
+
+            <md-input-container class="md-block">
+                <label>Push Notif</label>
+                <md-icon>phonelink_ring </md-icon>
+                <input ng-model="admedika.data.memberId" type="text">
+            </md-input-container>
+
+            <div>
+                <md-button type="submit" class="md-raised md-primary">Submit</md-button>
+            </div>
+        </md-content>
+    </md-card>
+</section>-->
+
+<section>
+    <div class="page-header">
+        <h1> <i class="md md-camera"></i> Technical Configs</h1>
+        <p class="lead"> Some description for technical configs menu here</u>. </p>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card z-depth-2 setting-card" ng-click="setting.openAdMedika()">
+                <div class="card-content setting-card-content">
+                    <div class="row">
+                        <div class="col-md-12 setting-icon">
+                            <md-icon>people</md-icon>
+                        </div>
+                        <div class="col-md-12 setting-title">
+                            <div class="card-title"> AdMedika</div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card z-depth-2 setting-card" ng-click="setting.openEmail()">
+                <div class="card-content setting-card-content">
+                    <div class="row">
+                        <div class="col-md-12 setting-icon">
+                            <md-icon>email</md-icon>
+                        </div>
+                        <div class="col-md-12 setting-title">
+                            <div class="card-title"> Email</div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card z-depth-2 setting-card" ng-click="setting.openGoogle()">
+                <div class="card-content setting-card-content">
+                    <div class="row">
+                        <div class="col-md-12 setting-icon">
+                            <md-icon>email</md-icon>
+                        </div>
+                        <div class="col-md-12 setting-title">
+                            <div class="card-title"> Google</div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card z-depth-2 setting-card" ng-click="setting.openNotif()">
+                <div class="card-content setting-card-content">
+                    <div class="row">
+                        <div class="col-md-12 setting-icon">
+                            <md-icon>phonelink_ring</md-icon>
+                        </div>
+                        <div class="col-md-12 setting-title">
+                            <div class="card-title"> Push Notif</div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

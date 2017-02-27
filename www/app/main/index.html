@@ -1,0 +1,77 @@
+<main>
+    <aside class="sidebar fixed">
+        <div class="brand-logo grey lighten-5">
+            <div id="logo">
+                <img src="img/logo-1.png" class="img-logo" />
+            </div>
+            MyPersona </div>
+        <div class="user-logged-in red darken-4">
+            <div class="content">
+                <div class="user-name">Dhian <span class="text-muted f9">admin</span></div>
+                <div class="user-email">dhian@gmail.com</div>
+                <div class="user-actions"> <a ui-sref="app.auth.login">LOGOUT</a> </div>
+            </div>
+        </div>
+        <ul class="menu-links grey lighten-5">
+            <li icon="md md-blur-on">
+                <a ui-sref="app.main.home">
+                    <md-icon>dashboard</md-icon>&nbsp;<span>Dashboard</span></a>
+            </li>
+            <md-subheader class="md-no-sticky grey lighten-3">User Management</md-subheader>
+            <li icon="md md-blur-on">
+                <a ui-sref="app.main.user.browse">
+                    <md-icon>people</md-icon>&nbsp;<span>Browse All Users</span></a>
+            </li>
+            <md-subheader class="md-no-sticky grey lighten-3">My AdMedika Management</md-subheader>
+            <li icon="md md-blur-on">
+                <a ui-sref="app.main.admedika.user.browse">
+                    <md-icon>wc</md-icon>
+                    </i>&nbsp;<span>Browse All AdMedika Users</span></a>
+            </li>
+            <li icon="md md-blur-on">
+                <a ui-sref="app.main.admedika.setting">
+                    <md-icon>settings_input_component</md-icon>&nbsp;<span>Setting Technical Configs</span></a>
+            </li>
+            <md-subheader class="md-no-sticky grey lighten-3">Support Management</md-subheader>
+            <li icon="md md-blur-on">
+                <a ui-sref="app.main.support.pages.browse">
+                    <md-icon>library_books</md-icon>&nbsp;<span>Browse All Support Pages</span></a>
+            </li>
+            <li icon="md md-blur-on">
+                <a ui-sref="app.main.support.inquiry.browse">
+                    <md-icon>recent_actors</md-icon>
+                    </i>&nbsp;<span>Browse All User's Inquiry</span></a>
+            </li>
+            <md-subheader class="md-no-sticky grey lighten-3">Analytic</md-subheader>
+            <li icon="md md-blur-on">
+                <a ui-sref="app.main.analytic.user">
+                    <md-icon>multiline_chart</md-icon>&nbsp;<span>View User Analytic</span></a>
+            </li>
+            <li icon="md md-blur-on">
+                <a ui-sref="app.main.analytic.admedika">
+                    <md-icon>pie_chart_outlined</md-icon>
+                    </i>&nbsp;<span>View AdMedika Analytic</span></a>
+            </li>
+            <li icon="md md-blur-on">
+                <a ui-sref="app.main.analytic.support">
+                    <md-icon>show_chart</md-icon>&nbsp;<span>View Support Analytic</span></a>
+            </li>
+        </ul>
+    </aside>
+
+    <div class="main-container">
+        <nav class="navbar navbar-default navbar-fixed-top red darken-4">
+            <div class="container-fluid">
+                <div class="navbar-header pull-left">
+                    <button type="button" class="navbar-toggle pull-left m-15" data-activates=".sidebar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <ul class="breadcrumb">
+                        <li><a>Materialism</a></li>
+                        <li class="active">Dashboard</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div ui-view="content" class="main-content" autoscroll="true" bs-affix-target="" init-ripples=""></div>
+
+    </div>
+</main>

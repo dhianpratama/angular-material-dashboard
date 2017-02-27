@@ -1,0 +1,31 @@
+<md-dialog>
+    <form>
+        <md-toolbar class="red darken-4">
+            <div class="md-toolbar-tools">
+                <h2>{{pages.data.page}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="pages.cancel()">
+                    <md-icon>close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div layout="row" layout-xs="column" class="mg-top-10">
+                <div flex>
+                    <h5 class="no-margin">Page</h5>
+                    <p class="info-label">{{pages.data.page}}</p>
+                </div>
+                <div flex>
+                    <h5 class="no-margin">Sub Page</h5>
+                    <p class="info-label">{{pages.data.subPage}}</p>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" class="mg-top-10">
+                <div flex>
+                    <h5 class="no-margin">Content</h5>
+                    <p class="info-label">{{pages.data.content}}</p>
+                </div>
+            </div>
+        </md-dialog-content>
+    </form>
+</md-dialog>

@@ -1,0 +1,70 @@
+<md-dialog>
+    <form>
+        <md-toolbar class="red darken-4">
+            <div class="md-toolbar-tools">
+                <h2>{{user.title}} {{user.data.name}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="user.cancel()">
+                    <md-icon>close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content class="dialog-content">
+            <md-input-container class="md-icon-float md-block">
+                <label>Name</label>
+                <md-icon class="name">people</md-icon>
+                <input ng-model="user.data.name" type="text">
+            </md-input-container>
+
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block">
+                    <label>Gender</label>
+                    <md-icon class="name">people</md-icon>
+                    <md-select ng-model="user.data.gender">
+                        <md-option ng-repeat="g in ['Male', 'Female']" value="{{g}}">
+                            {{g}}
+                        </md-option>
+                    </md-select>
+                </md-input-container>
+
+                <md-input-container>
+                    <label>Birthdate</label>
+                    <md-datepicker ng-model="user.data.birthdate"></md-datepicker>
+                </md-input-container>
+            </div>
+
+            <md-input-container class="md-icon-float md-block">
+                <label>Email</label>
+                <md-icon class="name">email</md-icon>
+                <input ng-model="user.data.email" type="email">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Phone</label>
+                <md-icon>call</md-icon>
+                <input ng-model="user.data.phone" type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Card Number</label>
+                <md-icon>credit_card</md-icon>
+                <input ng-model="user.data.cardNumber" type="text">
+            </md-input-container>
+
+
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <md-button class="md-raised" ng-click="user.editPassword($event)">
+                Edit Password
+            </md-button>
+            <span flex></span>
+            <md-button class="md-raised" ng-click="user.cancel()">
+                Cancel
+            </md-button>
+            <md-button class="md-raised md-primary" ng-click="user.save()">
+                Save
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

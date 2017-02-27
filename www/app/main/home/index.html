@@ -1,0 +1,163 @@
+<div class="dashboard grey lighten-3">
+    <div class="row no-gutter">
+        <div class="col-sm-12 col-md-12 col-lg-9 grey lighten-4">
+            <div class="p-20 clearfix">
+                <div class="pull-right">
+                    <a href="pages-material-bird.html" target="_blank" class="btn btn-round-sm btn-link" data-toggle="tooltip" title="Play material bird"><i class="md md-games"></i></a>
+                    <div class="btn btn-round-sm btn-link" data-toggle="tooltip" title="Upload media"><i class="md md-crop-original"></i></div>
+                    <div class="btn btn-round-sm btn-link" data-toggle="tooltip" title="Write new document"><i class="md md-insert-drive-file"></i></div>
+                    <div class="btn btn-round-sm btn-link" data-toggle="tooltip" title="Add new user"><i class="md md-person-add"></i></div>
+                </div>
+                <h4 class="grey-text"> <i class="md md-dashboard"></i> <span class="hidden-xs">Analytics Summary</span> </h4>
+            </div>
+            <div class="p-20 no-p-t">
+                <div class="row gutter-14 kpi-dashboard">
+                    <div class="col-md-4">
+                        <div class="card small">
+                            <div class="theme-lighten-1 p-10">
+                                <div class="pull-right">
+                                    <div> <i class="md md-trending-up text-rgb-5"></i> 3% </div>
+                                </div>
+                                <h4 class="no-margin white-text w600">User Analytic</h4>
+                                <div class="f11" class="opac-08"> <i class="md md-star-outline"></i> Latest 10 May, 10:00 </div>
+                                <div class="p-10 p-t-30">
+                                    <div id="chart-line-1"></div>
+                                </div>
+                            </div>
+                            <div class="card-content p-10">
+                                <div class="row">
+                                    <div class="col-md-6 text-center card-dashboard-border">
+                                        <h3 class="no-margin w300">1333</h3>
+                                        <p class="grey-text w600">Total users</p>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <h3 class="no-margin w300">233</h3>
+                                        <p class="grey-text w600">New user</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card small">
+                            <div class="theme-secondary-lighten-1 p-10">
+                                <div class="pull-right">
+                                    <div> <i class="md md-trending-up  text-rgb-5"></i> 6% </div>
+                                </div>
+                                <h4 class="no-margin white-text w600">AdMedika Analytic</h4>
+                                <div class="f11" class="opac-08"> <i class="md md-star-outline"></i> Latest 10 May, 10:00 </div>
+                                <div class="p-10 p-t-30">
+                                    <div id="chart-line-2"></div>
+                                </div>
+                            </div>
+                            <div class="card-content p-10">
+                                <div class="row">
+                                    <div class="col-md-6 text-center card-dashboard-border">
+                                        <h3 class="no-margin w300">2643</h3>
+                                        <p class="grey-text w600">Total users</p>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <h3 class="no-margin w300">20</h3>
+                                        <p class="grey-text w600">New user</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card small">
+                            <div class="green lighten-1 p-10">
+                                <div class="pull-right">
+                                    <div> <i class="md md-trending-up  text-rgb-5"></i> 9% </div>
+                                </div>
+                                <h4 class="no-margin white-text w600">Support Analytic</h4>
+                                <div class="f11" class="opac-08"> <i class="md md-star-outline"></i> Latest 10 May, 10:00 </div>
+                                <div class="p-10 p-t-30">
+                                    <div id="chart-line-3"></div>
+                                </div>
+                            </div>
+                            <div class="card-content p-10">
+                                <div class="row">
+                                    <div class="col-md-6 text-center card-dashboard-border">
+                                        <h3 class="no-margin w300">1597</h3>
+                                        <p class="grey-text w600">Monthly total</p>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <h3 class="no-margin w300">34 </h3>
+                                        <p class="grey-text w600">Today total</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gutter-14">
+                    <div class="col-md-12">
+                        <div class="card" class="pd-l-20">
+                            <div layout="row">
+                                <div flex="66">
+                                    <canvas id="line" class="chart chart-line" chart-data="home.data" chart-labels="home.labels" chart-series="home.series" chart-options="home.options"
+                                        chart-dataset-override="home.datasetOverride">
+                                        </canvas>
+                                </div>
+                                <div flex="33" class="pd-l-30">
+                                    <div layout="row" layout-xs="column">
+                                        <div flex>
+                                            <h5 class="no-margin">Users</h5>
+                                            <p>231</p>
+                                        </div>
+                                    </div>
+                                    <div layout="row" layout-xs="column">
+                                        <div flex>
+                                            <h5 class="no-margin">AdMedika</h5>
+                                            <p>21</p>
+                                        </div>
+                                    </div>
+                                    <div layout="row" layout-xs="column">
+                                        <div flex>
+                                            <h5 class="no-margin">Support</h5>
+                                            <p>21</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-12">
+            <div class="p-20">
+                <div class="pull-right">
+                    <ul class="list-unstyled">
+                        <li class="dropdown">
+                            <button type="button" class="btn btn-round-sm btn-link" aria-haspopup="true" aria-expanded="false" data-template-url="assets/tpl/partials/dropdown-list-example.html"
+                                data-toggle="tooltip" title="More stats"> <i class="md md-equalizer"></i> </button>
+                        </li>
+                    </ul>
+                </div>
+                <h4 class="grey-text m-b-30">My Profile</h4>
+                <div class="card">
+                    <div class="card-image header"> <img src="img/1.jpg" class="img-responsive">
+                        <div class="card-title">Dhian Pratama</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-profile pull-right"><img src="/img/preview_default_profile.png" alt=""></div>
+                        <!--<p>I am a very simple card. I am good at containing small info.</p>-->
+                        <p>
+                            <md-icon class="font-20">people</md-icon>&nbsp;<strong>Muhammad Muthi Dhian Pratama</strong>
+                        </p>
+                        <p>
+                            <md-icon class="font-20">call</md-icon>&nbsp;(021) 87391732
+                        </p>
+                        <p>
+                            <md-icon class="font-20">email</md-icon>&nbsp;muthidp@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="chart-pagesviews"></div>
+        </div>
+    </div>
+</div>

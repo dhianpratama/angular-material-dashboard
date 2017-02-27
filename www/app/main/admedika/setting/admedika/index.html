@@ -1,0 +1,66 @@
+<md-dialog>
+    <form>
+        <md-toolbar class="red darken-4">
+            <div class="md-toolbar-tools">
+                <h2>{{setting.title}} {{setting.data.name}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="setting.cancel()">
+                    <md-icon>close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content class="dialog-content">
+            <md-input-container class="md-icon-float md-block">
+                <label>End Point</label>
+                <md-icon class="name">language</md-icon>
+                <input type="text">
+            </md-input-container>            
+
+            <md-input-container class="md-icon-float md-block">
+                <label>WSDL</label>
+                <md-icon class="name">label_outline</md-icon>
+                <input type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Service Code</label>
+                <md-icon>label_outline</md-icon>
+                <input type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Sub Code</label>
+                <md-icon>label_outline</md-icon>
+                <input type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>User Code</label>
+                <md-icon>people</md-icon>
+                <input type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Password</label>
+                <md-icon>lock</md-icon>
+                <input type="password">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Secret Key</label>
+                <md-icon>vpn_key</md-icon>
+                <input type="text">
+            </md-input-container>
+
+
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button class="md-raised" ng-click="setting.cancel()">
+                Cancel
+            </md-button>
+            <md-button class="md-raised md-primary" ng-click="setting.save()">Save</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

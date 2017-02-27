@@ -1,0 +1,98 @@
+<md-dialog>
+    <form>
+        <md-toolbar class="red darken-4">
+            <div class="md-toolbar-tools">
+                <h2>{{admedika.title}} {{admedika.data.name}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="admedika.cancel()">
+                    <md-icon>close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content class="dialog-content">
+
+            <div layout-gt-sm="row">
+                <md-input-container class="md-icon-float md-block">
+                    <label>Name</label>
+                    <md-icon class="name">people</md-icon>
+                    <input ng-model="admedika.data.name" type="text">
+                </md-input-container>
+
+                <md-input-container>
+                    <label>Birthdate</label>
+                    <md-datepicker ng-model="admedika.data.birthdate"></md-datepicker>
+                </md-input-container>
+            </div>
+
+            <md-input-container class="md-block">
+                <label>Call Center</label>
+                <md-icon>call</md-icon>
+                <input ng-model="admedika.data.callCenter" type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Policy Number</label>
+                <md-icon>call</md-icon>
+                <input ng-model="admedika.data.policyNumber" type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Member ID</label>
+                <md-icon>credit_card</md-icon>
+                <input ng-model="admedika.data.memberId" type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Member Type</label>
+                <md-icon class="name">people</md-icon>
+                <md-select ng-model="admedika.data.memberType">
+                    <md-option ng-repeat="g in ['Normal', 'VIP']" value="{{g}}">
+                        {{g}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Plan Type</label>
+                <md-icon class="name">people</md-icon>
+                <md-select ng-model="admedika.data.planType">
+                    <md-option ng-repeat="g in ['Plan 1', 'Plan 2']" value="{{g}}">
+                        {{g}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>BPJS ID</label>
+                <md-icon>credit_card</md-icon>
+                <input ng-model="admedika.data.bpjsId" type="text">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>BPJS Class</label>
+                <md-icon class="name">people</md-icon>
+                <md-select ng-model="admedika.data.bpjsClass">
+                    <md-option ng-repeat="g in ['1', '2']" value="{{g}}">
+                        {{g}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>BPJS Faskes</label>
+                <md-icon>credit_card</md-icon>
+                <input ng-model="admedika.data.bpjsFaskes" type="text">
+            </md-input-container>
+
+
+        </md-dialog-content>
+
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button class="md-raised" ng-click="admedika.cancel()">
+                Cancel
+            </md-button>
+            <md-button class="md-raised md-primary" ng-click="admedika.save()">Save</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

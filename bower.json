@@ -1,0 +1,61 @@
+{
+  "name": "mypersona-dashboard",
+  "description": "",
+  "authors": "",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-animate": "^1.6.1",
+    "angular-resource": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "angular-sanitize": "^1.6.1",
+    "angular-touch": "^1.6.1",
+    "angular-ui-router": "^0.3.2",
+    "angular-aria": "^1.6.1",
+    "angular-material": "^1.1.1",
+    "angular-messages": "^1.6.1",
+    "oclazyload": "^1.0.9",
+    "angular-material-data-table": "^0.10.10",
+    "angular-jwt": "^0.1.9",
+    "moment": "^2.17.1",
+    "angular-linq": "^1.0.2",
+    "sweetalert": "^1.1.3",
+    "ngSweetAlert": "angular-sweetalert#^1.1.2",
+    "angular-chart.js": "^1.1.1",
+    "chart.js": "^2.5.0",
+    "textAngular": "^1.5.16",
+    "angular-wysiwyg": "^1.2.4",
+    "bootstrap-sass": "^3.3.7",
+    "material-design-icons": "^3.0.1"
+  },
+  "overrides": {
+    "angular-material": {
+      "main": [
+        "angular-material.js"
+      ]
+    },
+    "angular-material-data-table": {
+      "main": [
+        "dist/md-data-table.js"
+      ]
+    },
+    "textAngular": {
+      "main": [
+        "./dist/textAngular.css",
+        "./dist/textAngular-rangy.min.js",
+        "./dist/textAngular-sanitize.js",
+        "./dist/textAngularSetup.js",
+        "./dist/textAngular.js"
+      ]
+    },
+    "bootstrap-sass": {
+      "ignore": true
+    },
+    "material-design-icons": {
+      "ignore": true
+    }
+  },
+  "devDependencies": {
+    "roboto-fontface": "^0.7.0"
+  }
+}

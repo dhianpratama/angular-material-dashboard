@@ -1,0 +1,16 @@
+stages:
+  - staging
+
+staging-job:
+  stage: staging
+  script:
+    - zip -r develop.zip . -x *.git*
+    - sudo unzip -o develop.zip -d /home/admedika/mypersona-dashboard
+    - sudo rm develop.zip
+    - cd /home/admedika/mypersona-dashboard
+    - sudo npm run build
+    - sudo pm2 restart mypersona-dashboard
+  only:
+    - develop
+  tags:
+    - admedika

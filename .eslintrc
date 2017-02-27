@@ -1,0 +1,12 @@
+{
+  "env": {
+    "node": true,
+    "es6": false
+  },
+  "extends": "airbnb-base/legacy",
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "no-console": ["error"],
+    "linebreak-style": 0
+  }
+}

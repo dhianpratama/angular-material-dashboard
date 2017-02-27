@@ -1,0 +1,93 @@
+<section>
+    <div class="page-header">
+        <h1> <i class="md md-camera"></i> AdMedika Users</h1>
+        <p class="lead"> Some description for admedika user menu here</u>. </p>
+    </div>
+    <md-card>
+        <md-toolbar class="md-table-toolbar md-default" ng-show="!admedika.filter.show && (!admedika.options.rowSelection || !admedika.selected.length)">
+            <div class="md-toolbar-tools">
+                <!--<span>AdMedika Users</span>-->
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="admedika.filter.show=true;">
+                    <md-icon>search</md-icon>
+                </md-button>
+                <md-button class="md-icon-button" ng-click="admedika.getData()">
+                    <md-icon>refresh</md-icon>
+                </md-button>
+                <md-button class="md-icon-button" ng-click="admedika.createNewData()">
+                    <md-icon>add</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-toolbar class="md-table-toolbar md-default" ng-show="admedika.filter.show">
+            <div class="md-toolbar-tools">
+                <md-icon class="material-icons">search</md-icon>
+                <form name="filter.form" flex>
+                    <input type="text" ng-model="admedika.query.filter.keyword" placeholder="search" class="full-width">
+                </form>
+                <button class="md-icon-button md-button md-ink-ripple" type="button" ng-click="admedika.closeSearch()" aria-label="close">
+        <md-icon class="material-icons">close</md-icon>
+        <div class="md-ripple-container"></div></button>
+            </div>
+        </md-toolbar>
+
+
+        <md-table-container>
+            <table md-table md-row-select ng-model="admedika.selected">
+                <thead md-head md-order="admedika.query.order" md-on-reorder="admedika.users">
+                    <tr md-row>
+                        <th md-column></th>
+                        <th md-column md-order-by="name"><span>Full Name</span></th>
+                        <th md-column md-order-by="birthdate"><span>Call Center</span></th>
+                        <th md-column md-order-by="email"><span>Member Type</span></th>
+                        <th md-column md-order-by="gender"><span>Plan Type</span></th>
+                        <th md-column md-order-by="phone"><span>BPJS Class</span></th>
+                    </tr>
+                </thead>
+                <tbody md-body>
+                    <tr md-row md-select-id="name" md-auto-select ng-repeat="u in admedika.users | filter:admedika.query.filter.keyword | orderBy: admedika.query.order | limitTo: admedika.query.limit: (admedika.query.page - 1) * admedika.query.limit">
+                        <td md-cell class="no-padding">
+                            <button type="button" class="btn btn-link btn-round" data-title="Edit item"><i class="md md-edit"></i><div class="ripple-wrapper"></div></button>
+                            <md-menu>
+                                <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="admedika.openMenu($mdMenu, $event)">
+                                    <md-icon class="material-icons">more_vert</md-icon>
+                                </md-button>
+                                <md-menu-content width="4">
+                                    <md-menu-item>
+                                        <md-button ng-click="admedika.viewData($event, u)">
+                                            <md-icon class="material-icons">visibility</md-icon>
+                                            <span>View</span>
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ng-click="admedika.editData($event, u)">
+                                            <md-icon class="material-icons">mode_edit</md-icon>
+                                            Edit
+                                        </md-button>
+                                    </md-menu-item>
+                                    <md-menu-divider></md-menu-divider>
+                                    <md-menu-item>
+                                        <md-button ng-click="admedika.onDelete($event, u)">
+                                            <md-icon class="material-icons">delete</md-icon>
+                                            Delete
+                                        </md-button>
+                                    </md-menu-item>
+                                </md-menu-content>
+                            </md-menu>
+                        </td>
+                        <td md-cell>{{u.name}}</td>
+                        <td md-cell>{{u.callCenter}}</td>
+                        <td md-cell>{{u.memberType}}</td>
+                        <td md-cell>{{u.planType}}</td>
+                        <td md-cell>{{u.bpjsClass}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </md-table-container>
+
+        <md-table-pagination md-limit="admedika.query.limit" md-limit-options="[10, 25, 50]" md-page="admedika.query.page" md-total="{{admedika.users.length}}"></md-table-pagination>
+
+    </md-card>
+    
+</section>

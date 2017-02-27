@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+  <title>MyPersona Dashboard</title>
+  <!-- style:css -->
+  <link rel="stylesheet" href="lib/colorpicker.css">
+  <link rel="stylesheet" href="lib/material-design-iconic-font.min.css">
+  <link rel="stylesheet" href="lib/sweetalert.css">
+  <link rel="stylesheet" href="lib/textAngular.css">
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endinject -->
+</head>
+
+<body class="theme-template-dark theme-red">
+  <section ui-view style="height:100%;"></section>
+  <!-- script:js -->
+  
+  <script src="lib/angular.js"></script>
+  
+  <script src="lib/Chart.js"></script>
+  
+  <script src="lib/sweetalert.min.js"></script>
+  
+  <script src="lib/textAngular-rangy.min.js"></script>
+  
+  <script src="lib/angular-animate.js"></script>
+  
+  <script src="lib/angular-aria.js"></script>
+  
+  <script src="lib/angular-chart.js"></script>
+  
+  <script src="lib/angular-jwt.js"></script>
+  
+  <script src="lib/angular-linq.js"></script>
+  
+  <script src="lib/angular-material.js"></script>
+  
+  <script src="lib/angular-messages.js"></script>
+  
+  <script src="lib/angular-resource.js"></script>
+  
+  <script src="lib/angular-route.js"></script>
+  
+  <script src="lib/angular-sanitize.js"></script>
+  
+  <script src="lib/angular-touch.js"></script>
+  
+  <script src="lib/angular-ui-router.js"></script>
+  
+  <script src="lib/angular-wysiwyg.min.js"></script>
+  
+  <script src="lib/bootstrap-colorpicker-module.js"></script>
+  
+  <script src="lib/jquery.js"></script>
+  
+  <script src="lib/md-data-table.js"></script>
+  
+  <script src="lib/moment.js"></script>
+  
+  <script src="lib/ocLazyLoad.js"></script>
+  
+  <script src="lib/rangy-classapplier.js"></script>
+  
+  <script src="lib/rangy-highlighter.js"></script>
+  
+  <script src="lib/rangy-selectionsaverestore.js"></script>
+  
+  <script src="lib/rangy-serializer.js"></script>
+  
+  <script src="lib/rangy-textrange.js"></script>
+  
+  <script src="lib/SweetAlert.js"></script>
+  
+  <script src="lib/textAngular-sanitize.js"></script>
+  
+  <script src="lib/textAngular.js"></script>
+  
+  <script src="lib/textAngularSetup.js"></script>
+  
+  <script src="app/module.js"></script>
+  
+  <script src="app/auth/module.js"></script>
+  
+  <script src="app/main/module.js"></script>
+  
+  <script src="app/providers/module.js"></script>
+  
+  <script src="app/auth/forget-password/module.js"></script>
+  
+  <script src="app/auth/forget-password-success/module.js"></script>
+  
+  <script src="app/auth/login/module.js"></script>
+  
+  <script src="app/main/admedika/module.js"></script>
+  
+  <script src="app/main/analytic/module.js"></script>
+  
+  <script src="app/main/home/module.js"></script>
+  
+  <script src="app/main/support/module.js"></script>
+  
+  <script src="app/main/user/module.js"></script>
+  
+  <script src="app/providers/auth/module.js"></script>
+  
+  <script src="app/providers/graphql/module.js"></script>
+  
+  <script src="app/main/admedika/setting/module.js"></script>
+  
+  <script src="app/main/admedika/user/module.js"></script>
+  
+  <script src="app/main/analytic/admedika/module.js"></script>
+  
+  <script src="app/main/analytic/support/module.js"></script>
+  
+  <script src="app/main/analytic/user/module.js"></script>
+  
+  <script src="app/main/support/inquiry/module.js"></script>
+  
+  <script src="app/main/support/pages/module.js"></script>
+  
+  <script src="app/main/user/browse/module.js"></script>
+  
+  <script src="app/main/user/update/module.js"></script>
+  
+  <script src="app/main/user/view/module.js"></script>
+  
+  <script src="app/main/admedika/user/browse/module.js"></script>
+  
+  <script src="app/main/admedika/user/update/module.js"></script>
+  
+  <script src="app/main/admedika/user/view/module.js"></script>
+  
+  <script src="app/main/support/inquiry/browse/module.js"></script>
+  
+  <script src="app/main/support/inquiry/reply/module.js"></script>
+  
+  <script src="app/main/support/inquiry/view/module.js"></script>
+  
+  <script src="app/main/support/pages/browse/module.js"></script>
+  
+  <script src="app/main/support/pages/create/module.js"></script>
+  
+  <script src="app/main/support/pages/update/module.js"></script>
+  
+  <script src="app/main/support/pages/view/module.js"></script>
+  
+  <script src="app/config.js"></script>
+  
+  <script src="app/route.js"></script>
+  
+  <script src="app/run.js"></script>
+  
+  <script src="app/auth/route.js"></script>
+  
+  <script src="app/main/route.js"></script>
+  
+  <script src="app/auth/forget-password/route.js"></script>
+  
+  <script src="app/auth/forget-password-success/route.js"></script>
+  
+  <script src="app/auth/login/route.js"></script>
+  
+  <script src="app/main/admedika/route.js"></script>
+  
+  <script src="app/main/analytic/route.js"></script>
+  
+  <script src="app/main/home/route.js"></script>
+  
+  <script src="app/main/support/route.js"></script>
+  
+  <script src="app/main/user/route.js"></script>
+  
+  <script src="app/providers/auth/provider.js"></script>
+  
+  <script src="app/providers/graphql/provider.js"></script>
+  
+  <script src="app/main/admedika/setting/route.js"></script>
+  
+  <script src="app/main/admedika/user/route.js"></script>
+  
+  <script src="app/main/analytic/admedika/route.js"></script>
+  
+  <script src="app/main/analytic/support/route.js"></script>
+  
+  <script src="app/main/analytic/user/route.js"></script>
+  
+  <script src="app/main/support/inquiry/route.js"></script>
+  
+  <script src="app/main/support/pages/route.js"></script>
+  
+  <script src="app/main/user/browse/route.js"></script>
+  
+  <script src="app/main/user/update/route.js"></script>
+  
+  <script src="app/main/user/view/route.js"></script>
+  
+  <script src="app/main/admedika/user/browse/route.js"></script>
+  
+  <script src="app/main/admedika/user/update/route.js"></script>
+  
+  <script src="app/main/admedika/user/view/route.js"></script>
+  
+  <script src="app/main/support/inquiry/browse/route.js"></script>
+  
+  <script src="app/main/support/inquiry/reply/route.js"></script>
+  
+  <script src="app/main/support/inquiry/view/route.js"></script>
+  
+  <script src="app/main/support/pages/browse/route.js"></script>
+  
+  <script src="app/main/support/pages/create/route.js"></script>
+  
+  <script src="app/main/support/pages/update/route.js"></script>
+  
+  <script src="app/main/support/pages/view/route.js"></script>
+  
+  <!-- endinject -->
+</body>
+
+</html>

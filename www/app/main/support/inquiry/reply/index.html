@@ -1,0 +1,39 @@
+<md-dialog>
+    <form>
+        <md-toolbar class="red darken-4">
+            <div class="md-toolbar-tools">
+                <h2>Reply {{inquiry.data.page}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="inquiry.cancel()">
+                    <md-icon>close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div layout="row" layout-xs="column" class="mg-top-10">
+                <div flex>
+                    <h5 class="no-margin">Page</h5>
+                    <p>{{inquiry.data.page}}</p>
+                </div>
+                <div flex>
+                    <h5 class="no-margin">Sub Page</h5>
+                    <p>{{inquiry.data.subPage}}</p>
+                </div>
+            </div>
+            <div layout="row" layout-xs="column" class="mg-top-10">
+                <div flex>
+                    <h5 class="no-margin">Content</h5>
+                    <p>{{inquiry.data.content}}</p>
+                </div>
+            </div>
+            <md-input-container class="md-block">
+                <label>Reply</label>
+                <textarea ng-model="inquiry.data.reply" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+            </md-input-container>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button class="md-raised md-primary" ng-click="inquiry.save()">Submit</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>
