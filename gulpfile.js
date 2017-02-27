@@ -161,6 +161,10 @@ gulp.task('serve', ['compile'], function onServe() {
   gls.new('app.js').start();
 });
 
+gulp.task('serve:prod', function onServe() {
+  gls.new('app.js').start();
+});
+
 gulp.task('watch', function onWatch() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
   gulp.watch(jsFilesToInject, ['inject'])
