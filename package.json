@@ -9,7 +9,7 @@
     "build": "gulp build",
     "prestart": "npm install && bower install --allow-root",
     "prebuild": "npm install && bower install --allow-root",
-	"postinstall": "bower install && gulp build && gulp serve"
+	"postinstall": "npm install && bower install && gulp build && gulp serve"
   },
   "repository": {
     "type": "git",
