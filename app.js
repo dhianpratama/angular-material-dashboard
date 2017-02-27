@@ -5,7 +5,7 @@ var path = require('path');
 var pkg = require('./package');
 
 var app = express();
-var port = '80';
+var port = '4322';
 
 app.use(express.static(path.resolve(__dirname, 'www')));
 app.use(function on(req, res) {
