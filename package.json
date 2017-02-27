@@ -1,5 +1,5 @@
 {
-  "name": "mypersona-dashboard",
+  "name": "angular-material-dashboard",
   "version": "0.0.0",
   "description": "",
   "main": "app.js",
@@ -8,21 +8,12 @@
     "start": "gulp",
     "build": "gulp build",
     "prestart": "npm install && bower install --allow-root",
-    "prebuild": "npm install && bower install --allow-root"
+    "prebuild": "npm install && bower install --allow-root",
+	"postinstall": "gulp build & gulp serve"
   },
-  "author": "Lussa Teknologi",
-  "maintainers": [
-    {
-      "name": "Mohammad Abdul Iman Syah",
-      "email": "iman@lussa.net"
-    }
-  ],
   "repository": {
     "type": "git",
-    "url": "http://git.lussa.net/admedika/mypersona-dashboard.git"
-  },
-  "bugs": {
-    "url": "http://git.lussa.net/admedika/mypersona-dashboard/issues"
+    "url": "https://github.com/dhianpratama/angular-material-dashboard.git"
   },
   "dependencies": {
     "express": "^4.14.0",
